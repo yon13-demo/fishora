@@ -14,7 +14,19 @@
     p { color:var(--muted); font-size:14px; line-height:1.65; margin:0 auto 24px; max-width:390px; }
     .download { background:var(--navy); border-radius:7px; color:#fff; display:inline-block; font-weight:700; padding:15px 24px; text-decoration:none; transition:transform .2s,background .2s; } .download:hover { background:#124b60; transform:translateY(-2px); }
     .note { background:#eaf8fa; border-radius:8px; color:#527783; font-size:12px; margin:28px 0 0; padding:14px; }
+    .preview { margin:34px auto 0; max-width:490px; text-align:left; }
+    .preview h2 { font-size:18px; letter-spacing:-.4px; margin:0 0 13px; }
+    .gallery { display:grid; gap:12px; grid-template-columns:repeat(2,1fr); }
+    .gallery a { background:#e6f6f8; border:1px solid #d5ebee; border-radius:8px; display:block; overflow:hidden; }
+    .gallery img { aspect-ratio:16/9; display:block; height:100%; object-fit:cover; transition:transform .2s; width:100%; }
+    .gallery a:hover img { transform:scale(1.04); }
+    .lightbox { align-items:center; background:rgba(4,29,42,.88); display:none; inset:0; justify-content:center; padding:24px; position:fixed; z-index:5; }
+    .lightbox:target { display:flex; }
+    .lightbox-content { max-height:calc(100vh - 100px); max-width:min(1100px,94vw); position:relative; text-align:center; width:100%; }
+    .lightbox img { border:3px solid #fff; border-radius:10px; box-shadow:0 18px 60px rgba(0,0,0,.35); max-height:calc(100vh - 120px); max-width:100%; object-fit:contain; }
+    .back-button { background:#fff; border-radius:6px; color:var(--navy); display:inline-block; font-size:13px; font-weight:700; margin-top:16px; padding:11px 18px; text-decoration:none; }
     footer { color:#86a0a7; font-size:10px; margin-top:32px; }
+    .docs-link { color:#4a9eaa; display:block; font-size:12px; font-weight:700; margin-top:18px; text-decoration:none; }
   </style>
 </head>
 <body>
@@ -23,8 +35,28 @@
     <h1>fishora <em>demo.</em></h1>
     <p>Unduh aplikasi Android Fishora untuk mencoba ekosistem seafood yang menghubungkan Nelayan, bisnis, dan Buyer.</p>
     <a class="download" href="./fishora-demo.apk" download>Unduh APK Fishora ↗</a>
+    <a class="docs-link" href="./docs.html">Buka dokumentasi Fishora ↗</a>
+    <section class="preview">
+      <h2>Preview aplikasi Fishora</h2>
+      <div class="gallery">
+        <a href="#preview-1"><img src="./fishora/fishora1.PNG" alt="Preview Fishora 1"></a>
+        <a href="#preview-2"><img src="./fishora/fishora2.PNG" alt="Preview Fishora 2"></a>
+        <a href="#preview-3"><img src="./fishora/fishora3.PNG" alt="Preview Fishora 3"></a>
+        <a href="#preview-4"><img src="./fishora/fishora4.PNG" alt="Preview Fishora 4"></a>
+        <a href="#preview-5"><img src="./fishora/fishora5.PNG" alt="Preview Fishora 5"></a>
+        <a href="#preview-6"><img src="./fishora/fishora6.PNG" alt="Preview Fishora 6"></a>
+        <a href="#preview-7"><img src="./fishora/fishora7.PNG" alt="Preview Fishora 7"></a>
+      </div>
+    </section>
     <div class="note">Setelah selesai diunduh, buka file APK di Android lalu izinkan instalasi dari sumber ini jika diminta.</div>
     <footer>Copyright 2026 Fishora - demo untuk tugas individu ide bisnis</footer>
   </main>
+  <div class="lightbox" id="preview-1"><div class="lightbox-content"><img src="./fishora/fishora1.PNG" alt="Preview Fishora 1 diperbesar"><br><a class="back-button" href="#">← Kembali</a></div></div>
+  <div class="lightbox" id="preview-2"><div class="lightbox-content"><img src="./fishora/fishora2.PNG" alt="Preview Fishora 2 diperbesar"><br><a class="back-button" href="#">← Kembali</a></div></div>
+  <div class="lightbox" id="preview-3"><div class="lightbox-content"><img src="./fishora/fishora3.PNG" alt="Preview Fishora 3 diperbesar"><br><a class="back-button" href="#">← Kembali</a></div></div>
+  <div class="lightbox" id="preview-4"><div class="lightbox-content"><img src="./fishora/fishora4.PNG" alt="Preview Fishora 4 diperbesar"><br><a class="back-button" href="#">← Kembali</a></div></div>
+  <div class="lightbox" id="preview-5"><div class="lightbox-content"><img src="./fishora/fishora5.PNG" alt="Preview Fishora 5 diperbesar"><br><a class="back-button" href="#">← Kembali</a></div></div>
+  <div class="lightbox" id="preview-6"><div class="lightbox-content"><img src="./fishora/fishora6.PNG" alt="Preview Fishora 6 diperbesar"><br><a class="back-button" href="#">← Kembali</a></div></div>
+  <div class="lightbox" id="preview-7"><div class="lightbox-content"><img src="./fishora/fishora7.PNG" alt="Preview Fishora 7 diperbesar"><br><a class="back-button" href="#">← Kembali</a></div></div>
 </body>
 </html>
